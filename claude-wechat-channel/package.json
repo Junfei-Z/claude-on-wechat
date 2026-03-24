@@ -1,0 +1,41 @@
+{
+  "name": "claude-wechat-channel",
+  "version": "0.1.0",
+  "description": "Claude Code 微信 Channel — 让 Claude Code 通过微信收发消息",
+  "type": "module",
+  "bin": {
+    "claude-wechat-channel": "./dist/server.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "tsc",
+    "start": "node dist/server.js"
+  },
+  "files": [
+    "dist/"
+  ],
+  "keywords": [
+    "claude",
+    "claude-code",
+    "wechat",
+    "mcp",
+    "channel",
+    "ai",
+    "chatbot"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fengliu222/claude-wechat-channel"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "@types/qrcode": "^1.5.6",
+    "qrcode": "^1.5.4",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  }
+}
