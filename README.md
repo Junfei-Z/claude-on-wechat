@@ -4,9 +4,6 @@
 
 微信发消息，Claude Code 干活 — 读代码、改 Bug、提 PR、查论文、跑命令，全在一条微信消息里完成。
 
-<p align="center">
-  <em>🎬 Demo GIF 占位 — 替换为实际录屏</em>
-</p>
 
 ---
 
