@@ -3,6 +3,9 @@
   <img src="https://img.shields.io/badge/Claude_Code-191919?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude Code"/>
   <img src="https://img.shields.io/badge/MCP-Protocol-blue?style=for-the-badge" alt="MCP"/>
   <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="License"/>
+  <br/>
+  <img src="https://img.shields.io/github/stars/Junfei-Z/claude-on-wechat?style=for-the-badge&logo=github&color=gold" alt="Stars"/>
+  <img src="https://img.shields.io/github/forks/Junfei-Z/claude-on-wechat?style=for-the-badge&logo=github" alt="Forks"/>
 </p>
 
 <h1 align="center">💬 Claude on WeChat</h1>
@@ -87,7 +90,17 @@
 
 ### 1️⃣ 注册 MCP server
 
-在你想让 Claude Code 工作的目录下，创建或编辑 `.mcp.json`：
+将本项目中的 [`.mcp.json`](.mcp.json) 下载到你想让 Claude Code 工作的目录下即可：
+
+```bash
+# 方式一：直接下载
+curl -O https://raw.githubusercontent.com/Junfei-Z/claude-on-wechat/main/.mcp.json
+
+# 方式二：手动创建
+```
+
+<details>
+<summary>点击查看 .mcp.json 内容</summary>
 
 ```json
 {
@@ -99,6 +112,8 @@
   }
 }
 ```
+
+</details>
 
 ### 2️⃣ 启动 Claude Code
 
@@ -167,6 +182,14 @@ rm -rf ~/.wechat-claude/accounts/
 ## 📄 License
 
 MIT
+
+---
+
+## ⭐ 觉得有用？
+
+如果这个项目对你有帮助，请给个 **Star** 支持一下！你的 Star 是我持续更新的动力 🙏
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Junfei-Z/claude-on-wechat&type=Date)](https://star-history.com/#Junfei-Z/claude-on-wechat&Date)
 
 ---
 
