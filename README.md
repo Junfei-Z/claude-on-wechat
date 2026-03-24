@@ -89,34 +89,33 @@
 - 📦 Node.js 18+ 或 Bun 运行时
 - 💬 微信 **v8.0.70+**
 
-### 1️⃣ 注册 MCP server
-
-将本项目中的 [`.mcp.json`](.mcp.json) 下载到你想让 Claude Code 工作的目录下即可：
+### 1️⃣ 克隆项目并构建
 
 ```bash
-# 方式一：直接下载
-curl -O https://raw.githubusercontent.com/Junfei-Z/claude-on-wechat/main/.mcp.json
-
-# 方式二：手动创建
+git clone https://github.com/Junfei-Z/claude-on-wechat.git
+cd claude-on-wechat
+npm install
+npm run build
 ```
 
-<details>
-<summary>点击查看 .mcp.json 内容</summary>
+### 2️⃣ 配置 MCP server
+
+在你想让 Claude Code 工作的目录下，创建或编辑 `.mcp.json`，将 `<你的路径>` 替换为实际的项目路径：
 
 ```json
 {
   "mcpServers": {
     "wechat": {
-      "command": "npx",
-      "args": ["claude-on-wechat"]
+      "command": "node",
+      "args": ["<你的路径>/claude-on-wechat/dist/server.js"]
     }
   }
 }
 ```
 
-</details>
+> 💡 例如，如果你克隆到了 home 目录：`"args": ["/Users/yourname/claude-on-wechat/dist/server.js"]`
 
-### 2️⃣ 启动 Claude Code
+### 3️⃣ 启动 Claude Code
 
 ```bash
 claude --dangerously-load-development-channels server:wechat
@@ -130,7 +129,7 @@ claude --dangerously-load-development-channels server:wechat
 rm -rf ~/.wechat-claude/accounts/
 ```
 
-### 3️⃣ 开始使用
+### 4️⃣ 开始使用
 
 用微信给登录的账号发消息，Claude Code 会自动接收并回复 🎉
 
@@ -144,8 +143,8 @@ rm -rf ~/.wechat-claude/accounts/
 {
   "mcpServers": {
     "wechat": {
-      "command": "npx",
-      "args": ["claude-on-wechat"],
+      "command": "node",
+      "args": ["<你的路径>/claude-on-wechat/dist/server.js"],
       "env": {
         "DATA_DIR": "~/.wechat-claude",
         "DEBUG": "1"
