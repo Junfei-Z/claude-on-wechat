@@ -83,6 +83,7 @@
 
 - 🤖 Claude Code **v2.1.80+**
 - 📦 Node.js 18+ 或 Bun 运行时
+- 💬 微信 **v8.0.70+**
 
 ### 1️⃣ 注册 MCP server
 
