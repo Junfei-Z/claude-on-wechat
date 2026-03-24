@@ -98,27 +98,45 @@ npm install
 npm run build
 ```
 
-### 2️⃣ 配置 MCP server
+### 2️⃣ 注册 MCP server
 
-在你想让 Claude Code 工作的目录下，创建或编辑 `.mcp.json`，将 `<你的路径>` 替换为实际的项目路径：
+使用 `claude mcp add` 命令注册，将路径替换为你的实际克隆位置：
+
+```bash
+claude mcp add wechat -- node /你的路径/claude-on-wechat/dist/server.js
+```
+
+> 💡 例如：`claude mcp add wechat -- node /Users/yourname/claude-on-wechat/dist/server.js`
+
+<details>
+<summary>📝 也可以手动编辑 .mcp.json（点击展开）</summary>
+
+在你想让 Claude Code 工作的目录下，创建或编辑 `.mcp.json`：
 
 ```json
 {
   "mcpServers": {
     "wechat": {
       "command": "node",
-      "args": ["<你的路径>/claude-on-wechat/dist/server.js"]
+      "args": ["/你的路径/claude-on-wechat/dist/server.js"]
     }
   }
 }
 ```
 
-> 💡 例如，如果你克隆到了 home 目录：`"args": ["/Users/yourname/claude-on-wechat/dist/server.js"]`
+</details>
 
 ### 3️⃣ 启动 Claude Code
 
+> ⚠️ **注意**：以下命令需要在**终端 shell** 中运行（即正常的命令行提示符下），不是在 Claude Code 的交互界面里。
+
 ```bash
 claude --dangerously-load-development-channels server:wechat
+```
+
+启动后你应该看到：
+```
+Listening for channel messages from: server:wechat
 ```
 
 > 💡 首次启动会自动弹出微信登录二维码图片，用微信扫码登录。登录凭证会保存到 `~/.wechat-claude/`，后续启动自动恢复。
@@ -133,18 +151,26 @@ rm -rf ~/.wechat-claude/accounts/
 
 用微信给登录的账号发消息，Claude Code 会自动接收并回复 🎉
 
+你可以发送**文字、图片、文件、视频、语音**，Claude Code 都能接收和处理。
+
 ---
 
 ## 🔧 配置
 
-通过环境变量配置，在 `.mcp.json` 中传入：
+通过环境变量配置。可以在启动时传入，或在 `.mcp.json` 中设置：
+
+```bash
+# 方式一：启动时传入环境变量
+DEBUG=1 claude --dangerously-load-development-channels server:wechat
+```
 
 ```json
+// 方式二：在 .mcp.json 中配置
 {
   "mcpServers": {
     "wechat": {
       "command": "node",
-      "args": ["<你的路径>/claude-on-wechat/dist/server.js"],
+      "args": ["/你的路径/claude-on-wechat/dist/server.js"],
       "env": {
         "DATA_DIR": "~/.wechat-claude",
         "DEBUG": "1"
