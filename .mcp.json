@@ -1,8 +1,8 @@
 {
   "mcpServers": {
     "wechat": {
-      "command": "npx",
-      "args": ["claude-on-wechat"]
+      "command": "bun",
+      "args": ["./src/server.ts"]
     }
   }
 }
