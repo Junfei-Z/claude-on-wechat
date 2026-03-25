@@ -231,7 +231,14 @@ MIT
 
 如果这个项目对你有帮助，请给个 **Star** 支持一下！你的 Star 是我持续更新的动力 🙏
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Junfei-Z/claude-on-wechat&type=Date)](https://star-history.com/#Junfei-Z/claude-on-wechat&Date)
+
+<a href="https://www.star-history.com/?repos=Junfei-Z%2Fclaude-on-wechat&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/image?repos=Junfei-Z/claude-on-wechat&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/image?repos=Junfei-Z/claude-on-wechat&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/image?repos=Junfei-Z/claude-on-wechat&type=date&legend=top-left" />
+ </picture>
+</a>
 
 ---
 
